@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--chức năng của layout này là để tạo ra khung ảnh full viền chứa các image banner
+sau đó mình load nó qua khung chứa ảnh bên activity_main.xml để chạy ảnh đc full
+lý do tạo thêm layout này là vì nếu bên activity_main mình chỉ bỏ đc có một ảnh thui
+bên này mình để nhiều ảnh qua kia load lại sẽ hay hơn
+
+===> nói đúng hơn đây là t/c oop load nhiều ảnh đi chăng nữa chỉ cần load vào một fragment thui
+không ai rảnh mà mỗi ảnh mỗi thiết kế một fragment-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PhotoFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:id="@+id/img_photo_id">
+    </ImageView>
+
+</FrameLayout>

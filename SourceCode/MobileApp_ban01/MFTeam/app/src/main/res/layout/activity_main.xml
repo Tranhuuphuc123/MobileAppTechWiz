@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    android:id="@+id/drawID"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarID"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <!-- Thêm icon giỏ hàng -->
+                <ImageButton
+                    android:id="@+id/cartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cart_icon"
+                    android:contentDescription="@string/cart_icon_description"
+                    android:onClick="onCartIconClick"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:background="@null"/>
+
+                <ImageButton
+                    android:id="@+id/noteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/note_icon"
+                    android:contentDescription="@string/cart_icon_description"
+                    android:onClick="onCartIconClick"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:background="@null"/>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--Content View-->
+        <FrameLayout
+            android:id="@+id/content_frame_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--banner-->
+            <LinearLayout
+                android:id="@+id/banner_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <!--make banner images-->
+                <!--ViewPager cho phép bạn tạo giao diện mà người dùng có thể trượt qua các
+                trang hoặc các hình ảnh khác nhau như một loại "slider"-->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager2_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"/>
+
+                <!--make banner icon oval img(hình tron hiển thị chuyển trang)-->
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/circle3_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    app:ci_drawable="@drawable/oval_indicator"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/layout_header_navigation"
+        app:menu="@menu/menu_resource_files"
+        android:layout_gravity="start"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

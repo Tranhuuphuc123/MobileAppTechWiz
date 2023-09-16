@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+    id("com.google.gms.google-services")
+}
+
+android {
+    namespace 'com.example.mfstore'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.mfstore"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.7.0'
+    //Material Design - for UI Design
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.7.0'
+    implementation 'com.google.firebase:firebase-firestore:24.7.0'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'com.google.firebase:firebase-storage:20.2.1'
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // round imge view
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    // viewpager2(slider image với imageView2) baản mới nhất
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+
+    // firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+    implementation("com.google.firebase:firebase-analytics")
+
+
+   //bumtech glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    // OPT Phone
+    implementation 'com.google.firebase:firebase-auth'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+
+
+
+
+
+
+}

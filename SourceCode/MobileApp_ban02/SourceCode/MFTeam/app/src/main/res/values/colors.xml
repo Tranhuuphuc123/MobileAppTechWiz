@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue1">#00CCFF</color>
+    <color name="red">#FF0033</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="grey">#CCCCFF</color>
+    <color name="pink">#FF33CC</color>
+    <color name="orange">#FF6600</color>
+    <color name="blue">#000066</color>
+    <color name="violin">#8A2BE2</color>
+    <color name="ic_launcher_background">#2C4CCD</color>
+    <color name="green">#60B754</color>
+    <color name="green_phoimau">#A6EB9B</color>
+    <color name="xanhnhat">#CCFFFF</color>
+    <color name="color_cart">#FFCC99</color>
+</resources>

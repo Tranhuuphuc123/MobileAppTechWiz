@@ -1,0 +1,146 @@
+{
+  "CatalogOfPlant": {
+    "Cp01": {
+      "CatalogID": "C001",
+      "CatalogTitle": "Flowers",
+      "IsDeleted": 0
+    },
+    "Cp02": {
+      "CatalogID": "C002",
+      "CatalogTitle": "Trees",
+      "IsDeleted": 1
+    }
+  },
+  "Customers": {
+    "Ct01": {
+      "Address": "123 HCM",
+      "CustomerID": "KH001",
+      "CustomerName": "Nguyen Van A",
+      "DateCreated": "2023-08-10",
+      "Email": "nguyenvana@gmail.com",
+      "Image": "nguyenvana.jpg",
+      "Password": "hashed_password",
+      "Phone": "0123456789",
+      "Status": "Active"
+    },
+    "Ct02": {
+      "Address": "234 Ha noi",
+      "CustomerID": "KH002",
+      "CustomerName": "Tran Thi B",
+      "DateCreated": "2023-08-09",
+      "Email": "tranthib@gmail.com",
+      "Image": "tranthib.jpg",
+      "Password": "hashed_password",
+      "Phone": "0987654321",
+      "Status": "Active"
+    }
+  },
+  "Delivery": {
+    "Dv01": {
+      "ActualDate": "2023-08-14",
+      "CarrierID": "C001",
+      "DeliveryAddress": "123 HCM",
+      "DeliveryCost": 10,
+      "DeliveryID": "D001",
+      "EstimatedDate": "2023-08-15",
+      "Notes": "Fragile items",
+      "Status": "Delivered",
+      "TrackingNumber": "ABC123XYZ"
+    },
+    "Dv02": {
+      "ActualDate": "2023-08-13",
+      "CarrierID": "C002",
+      "DeliveryAddress": "456 Hanoi",
+      "DeliveryCost": 50,
+      "DeliveryID": "D002",
+      "EstimatedDate": "2023-08-12",
+      "Notes": "Gift wrapping",
+      "Status": "In Transit",
+      "TrackingNumber": "DEF456UVW"
+    }
+  },
+  "Feedback": {
+    "Fb01": {
+      "ContentOfFeed": " fast delivery!",
+      "CustomerID": "KH001",
+      "FeedID": "F001",
+      "FeedStatus": "Published",
+      "SendingTime": "2023-08-11",
+      "TypeOfFeed": "Positive"
+    },
+    "Fb02": {
+      "ContentOfFeed": "Product arrived damaged.",
+      "CustomerID": "KH002",
+      "FeedID": "F002",
+      "FeedStatus": "Pending",
+      "SendingTime": "2023-08-10",
+      "TypeOfFeed": "Negative"
+    }
+  },
+  "Orders": {
+    "Od01": {
+      "CustomerID": "KH001",
+      "DeliveryID": "D001",
+      "Notes": "Rush delivery",
+      "OrderDate": "2023-08-11",
+      "OrderID": "OD001",
+      "OrderStatus": "Processed",
+      "TotalAmount": 150.75
+    },
+    "Od02": {
+      "CustomerID": "KH002",
+      "DeliveryID": "D002",
+      "Notes": "Gift wrapping",
+      "OrderDate": "2023-08-10",
+      "OrderID": "OD002",
+      "OrderStatus": "Shipped",
+      "TotalAmount": 99.99
+    }
+  },
+  "Plants": {
+    "Pt01": {
+      "CatalogID": "C001",
+      "PlantDescription": "Beautiful red roses.",
+      "PlantHeight": "20 cm",
+      "PlantID": "P001",
+      "PlantImage": "https://firebasestorage.googleapis.com/v0/b/mfteam-7a389.appspot.com/o/plant14.jpg?alt=media&token=a77c2674-aea0-4d5a-8997-568711475ac7",
+      "PlantName": "Rose",
+      "PlantOrigin": "England",
+      "PlantPrice": 599,
+      "PlantStatus": "Available",
+      "PlantStock": 100,
+      "SupID": "SUP001"
+    },
+    "Pt02": {
+      "CatalogID": "C001",
+      "PlantDescription": " white lilies.",
+      "PlantHeight": "18 cm",
+      "PlantID": "P002",
+      "PlantImage": "https://firebasestorage.googleapis.com/v0/b/mfteam-7a389.appspot.com/o/plant7.jpg?alt=media&token=58850dcd-2c32-4a83-b946-8b58dd2fab66",
+      "PlantName": "Lily",
+      "PlantOrigin": "Asia",
+      "PlantPrice": 490,
+      "PlantStatus": "Available",
+      "PlantStock": 75,
+      "SupID": "SUP002"
+    }
+  },
+  "Suppliers": {
+    "Sl01": {
+      "City": "HCMCT",
+      "Email": "lili@gmail.com",
+      "Phone": "0123456789",
+      "SupAddress": "HCM",
+      "SupID": "SUP001",
+      "SupName": "Green Gardens"
+    },
+    "Sl02": {
+      "City": "Ha Noi",
+      "Email": "rose@gmail.com",
+      "Phone": "0987654321",
+      "SupAddress": "Hanoi",
+      "SupID": "SUP002",
+      "SupName": "Nature's Bounty"
+    }
+  }
+}

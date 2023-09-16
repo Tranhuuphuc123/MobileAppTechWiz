@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <!-- android:checkableBehavior="single" nhóm group, và "single"-> nếu người dùng chọn
+  một mục trong menu, thì mục trước đó (nếu có chọn) sẽ tự động bị bỏ chọn.-->
+ <group android:checkableBehavior="single">
+    <item android:id="@+id/nav_home_id"
+        android:title="@string/nav_home"
+        android:icon="@drawable/home_icon"/>
+  <item android:id="@+id/nav_favourite_id"
+      android:title="@string/nav_favorites"
+      android:icon="@drawable/favourite_icon"/>
+  <item android:id="@+id/nav_history_id"
+      android:title="@string/nav_history"
+      android:icon="@drawable/history_icon"/>
+ </group>
+
+ <!--cách trên group mà single là nhóm mà đơn chọn
+ còn cách dưới đây là nhóm hai menu vào trong một mục có chung ý nghĩa
+ cùng loại mà khác mục đích-->
+    <item android:title="@string/nav_account">
+        <menu>
+            <item android:id="@+id/nav_myprofile_id"
+                android:title="@string/nav_myprofile"
+                android:icon="@drawable/person_icon"/>
+
+            <item android:id="@+id/nav_forget_password"
+                android:title="@string/nav_forget_pass"
+                android:icon="@drawable/logout_icon"/>
+
+            <item android:id="@+id/nav_our_policy"
+                android:title="@string/nav_our_policy"
+                android:icon="@drawable/logout_icon"/>
+
+            <item android:id="@+id/nav_log_out"
+                android:title="@string/logout"
+                android:icon="@drawable/logout_icon"/>
+        </menu>
+    </item>
+</menu>
