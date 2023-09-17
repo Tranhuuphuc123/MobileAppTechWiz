@@ -17,22 +17,42 @@
             android:id="@+id/include"
             layout="@layout/custom_toolbar_products"/>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/relative_product_id"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="#0DD60E64"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/search_box"
+                android:hint="Please Search"
+                android:textSize="20dp"
+                android:paddingLeft="14dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/search_icon"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints"
-                android:text="MFStores nơi cây giống tốt, Đặt trọn niềm tin"
-                android:layout_margin="10dp"
+                android:text="MFStores Prestigious quality"
                 android:textStyle="bold"
                 android:textColor="@color/pink"
-                android:textSize="20dp" />
-        </RelativeLayout>
+                android:textSize="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+        </LinearLayout>
+
+        <!--mục hiển thị ds search-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_searchList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
 
         <!--Mục 01 -->
         <LinearLayout

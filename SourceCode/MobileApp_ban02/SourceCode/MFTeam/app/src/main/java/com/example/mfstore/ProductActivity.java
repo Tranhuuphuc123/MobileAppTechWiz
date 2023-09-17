@@ -2,7 +2,10 @@ package com.example.mfstore;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -49,6 +52,12 @@ public class ProductActivity extends AppCompatActivity {
     private RecyclerView recyclerView_product2;
 
 
+    /// phàn khai báo biến cho mục search
+     private EditText search_box;
+     private  List<ProductModels> list_search;
+     private RecyclerView recyclerView_search;
+    private ProductAdapter2 search_Adapter;
+
     // biến toàn cục cu lin FirebaseDatabase
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -62,6 +71,8 @@ public class ProductActivity extends AppCompatActivity {
         init();
         init1();
         init2();
+        // mục init cho search
+        init3();
 
         // gọi method xử lý load database từ realtime về Activity
         getListProductFromRealtimeDatabase();
@@ -71,6 +82,9 @@ public class ProductActivity extends AppCompatActivity {
 
         // nhóm product2
         getListProduct2FromRealtimedatabase();
+
+        // thực hiện chức năng search
+        getSearchRealtimeDatabase();
 
         /*Thêm sự kiện khi nút mũi tên được nhấn*/
         ImageView btn_back = findViewById(R.id.img_toolbar_id);
@@ -141,7 +155,25 @@ public class ProductActivity extends AppCompatActivity {
 
         // truyền xử lý sự kiện ch recyleView products..
         recyclerView_product2.setAdapter(productAdapter2);
+    }
 
+    // method init ánh xạ id cho muục Search
+    public void init3(){
+        recyclerView_search =  findViewById(R.id.recyclerview_searchList);
+        search_box = (EditText)findViewById(R.id.search_box);
+
+        // xử lý cho recycleView chuyển ảnh theo chiều ngang, chiều dọc
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView_search.setLayoutManager(layoutManager);
+        // khởi tạo list của các lớp model
+        list_search = new ArrayList<>();
+        // khởi tạo lơp adapter(sự kiện)
+        search_Adapter= new ProductAdapter2(this,list_search);
+        //thiết lập kích thước cố định và không thay đổi trong quá trình chạy ứng dụng cho recycleView.
+        recyclerView_search.setHasFixedSize(true);
+
+        // truyền xử lý sự kiện ch recyleView products..
+        recyclerView_search.setAdapter(search_Adapter);
     }
 
 
@@ -224,6 +256,59 @@ public class ProductActivity extends AppCompatActivity {
         });
     }
 
+    //////////////////////////////////////////////
+    /*function xử lý search_box*/
+   public void getSearchRealtimeDatabase(){
+        search_box.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String type = editable.toString().trim().toLowerCase();
+                if(type.isEmpty()){
+                    list_search.clear();
+                    search_Adapter.notifyDataSetChanged();
+                }else{
+                    searchProduct(editable.toString());
+                }
+            }
+            private void searchProduct(String type){
+                if(!type.isEmpty()){
+                    DatabaseReference myRealtime = database.getReference("Products");
+                    myRealtime.orderByChild("productName").startAt(type).endAt(type + "\uf8ff")
+                            .addValueEventListener(new ValueEventListener() {
+                        // nếu hàm thực thi đc nó sẽ text qua onDataChange
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            list_search.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                ProductModels productModels = dataSnapshot.getValue(ProductModels.class);
+                                list_search.add(productModels);
+                            }
+                            search_Adapter.notifyDataSetChanged();
+                        }
+
+                        // gặp lỗi sẽ thông báo cho người dùng thông qua hàm onCacelled
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            showToast();
+                        }
+
+                    });
+                }
+            }
+        });
+     }
+
+
 
     // hàm showToast gửi thông báo
     public void showToast(){
@@ -231,42 +316,3 @@ public class ProductActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-
-/* cách xử lý cho Firebase FireStore
-*
-*  db = FirebaseFirestore.getInstance();
-
-        recyclerView_product = findViewById(R.id.recyclerview_product_Indoor);
-
-        // item products
-        recyclerView_product.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        productModelsList = new ArrayList<>();
-        event_products_plants = new Event_Products_Plants(this, productModelsList);
-        recyclerView_product.setAdapter(event_products_plants);
-
-        // Đoạn code mẫu load firebase - xử lý kết nối firebase
-        db.collection("Plants_Products")
-            .get()
-            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                    if (task.isSuccessful()) {
-                        for (QueryDocumentSnapshot document : task.getResult()) {
-                            ProductModels productModels = document.toObject(ProductModels.class);
-                            productModelsList.add(productModels);
-                            event_products_plants.notifyDataSetChanged();
-                            Toast.makeText(ProductActivity.this, ""+task.getException(), Toast.LENGTH_LONG).show();
-                        }
-                    } else {
-                        Toast.makeText(ProductActivity.this, "Error!" + task.getException(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-  */

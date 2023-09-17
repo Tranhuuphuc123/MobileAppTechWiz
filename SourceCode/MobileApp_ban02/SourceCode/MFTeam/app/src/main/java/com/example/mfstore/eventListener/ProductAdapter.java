@@ -46,7 +46,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         }
         Glide.with(context).load(productModels.getProductImg()).into(holder.product_img);
         holder.productName.setText(productModels.getProductName());
-        holder.productPrice.setText(productModels.getProductPrice());
+        holder.productPrice.setText(String.valueOf(productModels.getProductPrice()));
 
 
         // Xử lý sự kiện click vào mục trong RecyclerView từ trang product sang productdetails

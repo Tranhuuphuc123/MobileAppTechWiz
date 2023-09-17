@@ -18,26 +18,29 @@
         android:theme="@style/Theme.MFStore"
         tools:targetApi="31">
         <activity
+            android:name=".Alert"
+            android:exported="false" />
+        <activity
             android:name=".ProductTypeDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".ProductDetailsActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ProductActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ProductActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".MapStoreActivity"
             android:exported="true" />
