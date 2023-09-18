@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Mặc định khi chưa tác động nhấn -->
+    <item>
+        <shape android:shape="rectangle">
+            <!--dẫn màu gốc bên themes qua-->
+            <solid android:color="@color/grey"/>
+            <!--tạo độ bo viền tròn  cho button-->
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+</selector>

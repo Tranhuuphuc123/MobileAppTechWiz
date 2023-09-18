@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">MyAppCustom</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_account">Accounts</string>
+    <string name="nav_myprofile">MyProfile</string>
+    <string name="nav_logout">Log Out</string>
+    <string name="nav_history">History</string>
+    <string name="nav_drawer_open">Open Navigation Drawer</string>
+    <string name="nav_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cart_icon_description">Cart</string>
+    <string name="nav_our_policy">Our Policy</string>
+
+    <!--  Your color  -->
+    <string name="logout">Log out</string>
+    <string name="phoneRegister">Phone</string>
+    <string name="emailRegister">Email</string>
+    <string name="password">Password must contains 6 letters</string>
+    <string name="reset_pass">Reset your password</string>
+    <string name="having_trouble">Having trouble? </string>
+    <string name="not_account">Do not have an account?</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="register">REGISTER</string>
+    <string name="full_name">Full Name</string>
+    <string name="phoneNumber">Phone</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="opt_code">Enter your opt code</string>
+    <string name="verify">Verify</string>
+    <string name="phoneVerify">Enter your phone</string>
+    <string name="SendOpt">Send OTP code</string>
+    <string name="resendOtp">I do not receive OTP code.</string>
+    <string name="updateProfile">Update</string>
+    <string name="address">Address</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="email_fg">Enter your email</string>
+    <string name="sendFgBtn">Send</string>
+    <string name="backFgBtn">Back</string>
+    <string name="passFg">Enter old password</string>
+    <string name="newPassFg">Enter new password</string>
+    <string name="passFgBtn">Change Your Password</string>
+    <string name="nav_forget_pass">Change the password</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="195dp"
+    android:background="@color/green"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="bottom">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userDefaultImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/user_orange"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/nameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account "
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/emailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aptech Employees - CUSCcantho"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

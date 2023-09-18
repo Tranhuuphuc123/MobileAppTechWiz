@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "226056232698",
+    "firebase_url": "https://plantstore-19b68-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "plantstore-19b68",
+    "storage_bucket": "plantstore-19b68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226056232698:android:58beedbcc67664447a7343",
+        "android_client_info": {
+          "package_name": "com.example.mfstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226056232698-7d5ujbtkmbfr7ttuk4hqdfm90a4mb0vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYCkkLjo0AUuqpkkttULHV_qA65TRxkdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226056232698-7d5ujbtkmbfr7ttuk4hqdfm90a4mb0vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

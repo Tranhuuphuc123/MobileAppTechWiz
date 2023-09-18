@@ -1,0 +1,92 @@
+<!-- res/layout/product_item_layout.xml -->
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/cardview_details_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bonsai_bestseller1" />
+
+        <TextView
+            android:id="@+id/cardview_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Office Plants"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/cardview_details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: $50.00"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cardview_details_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beautiful, fragrant and compact"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="8dp"
+
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/img_add_productDetails"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@android:drawable/ic_input_add" />
+
+            <TextView
+                android:id="@+id/txt_hienthi_productDeatils"
+                android:layout_width="118dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingHorizontal="8dp"
+                android:text="0"
+                android:textSize="34sp" />
+
+            <ImageButton
+                android:id="@+id/img_plus_productDetails"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@android:drawable/presence_busy" />
+
+            <Button
+                android:id="@+id/btn_productDetails"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Add to Cart" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

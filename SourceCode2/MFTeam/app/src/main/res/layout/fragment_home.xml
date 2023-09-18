@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <!--banner chạy quảng cáo-->
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btn01"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            android:background="@drawable/rectangle_background"-->
+        <!--            android:drawableTop="@drawable/bonsai"-->
+        <!--            android:text="PLANTS" />-->
+
+        <!--        <Button android:id="@+id/btn02"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            android:text="NEWS"-->
+        <!--            android:layout_toEndOf="@+id/btn01"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:background="@drawable/rectangle_background"-->
+        <!--            android:drawableTop="@drawable/news1"/>-->
+
+        <!--        <Button android:id="@+id/btn03"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            android:text="MAP"-->
+        <!--            android:layout_below="@+id/btn02"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@drawable/rectangle_background"-->
+        <!--            android:drawableTop="@drawable/map"/>-->
+
+        <!--        <Button android:id="@+id/btn04"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="90dp"-->
+        <!--            android:text="HEATH DOCTOR"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:layout_below="@+id/btn02"-->
+        <!--            android:layout_toEndOf="@+id/btn03"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:background="@drawable/rectangle_background"-->
+        <!--            android:drawableTop="@drawable/doctor"/>-->
+
+        <FrameLayout
+            android:id="@+id/round_img_container1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/border_card">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/round_img_id1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img1" />
+
+            <TextView
+                android:id="@+id/plants_caykieng_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Plants "
+                android:textSize="32sp"
+                android:layout_gravity="center"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/round_img_container2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border_color"
+            android:layout_toRightOf="@+id/round_img_container1">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/newsHomeImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img2" />
+
+            <TextView
+                android:id="@+id/news_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="News"
+                android:textColor="@color/green"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/round_img_container3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/round_img_container2"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/round_img_container1"
+            android:background="@drawable/border_card">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/storeImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img4" />
+
+            <TextView
+                android:id="@+id/plants_cayanqua_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Stores"
+                android:layout_gravity="center"
+                android:textColor="@color/green"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/round_img_container4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/round_img_container1"
+            android:layout_gravity="center"
+            android:background="@drawable/border_card"
+            android:layout_marginTop="20dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/carePlantImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img3" />
+
+            <TextView
+                android:id="@+id/plants_doctor_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:text="Care"
+                android:textColor="@color/green"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!--banner chạy quảng cáo-->
+    <LinearLayout
+        android:id="@+id/view_page2_id"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_home_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

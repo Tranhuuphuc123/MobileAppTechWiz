@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/backPolicyBtn"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:background="@drawable/arrow"/>
+
+    <ImageView
+        android:id="@+id/logoImageViewFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MF Team's Development Policies"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/PolicyTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sustainable Environment Policy: MF Team commits to providing plants grown sustainably and not harmful to the environment. We prioritize eco-friendly plant suppliers and avoid the use of chemicals that may cause pollution."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/PolicyTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plant Care Guidelines: The app will provide detailed instructions on how to care for each type of plant. We aim to provide customers with enough information to effectively care for their plants and promote their healthy growth."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/PolicyTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Creating a Nature-Loving Community: MF Team will provide an online forum for users to share experiences and knowledge about plant care, as well as connect with like-minded nature enthusiasts."
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/PolicyTextViewphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hotline: 19001008"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
