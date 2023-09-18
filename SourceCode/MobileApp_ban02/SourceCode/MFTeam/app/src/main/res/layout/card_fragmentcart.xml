@@ -2,102 +2,103 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="5dp">
+    app:cardCornerRadius="14dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/roundimg_card_fragmentcart"
-                android:layout_width="100dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bonsai_bestseller1"
-                app:riv_corner_radius="14dp"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/roundimg_card_fragmentcart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bonsai_bestseller1"
+            app:riv_corner_radius="14dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
             android:padding="10dp">
+
             <TextView
-                android:id="@+id/txt_cart01"
+                android:id="@+id/txt_cart_product_name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name????"
-                android:textStyle="bold"
-                android:textSize="15dp"
+                android:text="Product Name:"
                 android:textColor="@color/green"
+                android:textSize="15dp"
+                android:textStyle="bold"
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/txt_cart02"
+                android:id="@+id/txt_cart_product_price2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Price????"
-                android:textSize="14dp"
+                android:text="Price: 10 USD"
                 android:textColor="@color/red"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintTop_toBottomOf="@+id/txt_cart01"/>
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cart_product_name"
+                tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/recycle"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/txt_cart_quantity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 2"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cart_product_price"
+                tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/btn_cart_less"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="-"
-                android:padding="0dp"
-                android:textSize="15dp"
-                android:backgroundTint="@color/red"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintTop_toBottomOf="@+id/txt_cart02"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="-60dp"/>
+            <TextView
+                android:id="@+id/txt_cart_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: 22.09.2023"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cart_quantity"
+                tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/edittxt_cart"
-                android:layout_width="35dp"
-                android:layout_height="20dp"
-                android:padding="2dp"
-                android:textSize="15dp"
-                android:background="@color/xanhnhat"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintEnd_toEndOf="@+id/btn_cart_less"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="-40dp"/>
+            <TextView
+                android:id="@+id/txt_cart_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: 07:21:44 AM"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cart_date"
+                tools:ignore="MissingConstraints" />
 
+            <TextView
+                android:id="@+id/txt_cart_total_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price: 20 USD"
+                android:textColor="@color/blue"
+                android:textSize="14dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cart_time"
+                tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/btn_cart_add"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="+"
-                android:padding="0dp"
-                android:textSize="15dp"
-                android:backgroundTint="@color/red"
-                tools:ignore="MissingConstraints"
-                app:layout_constraintEnd_toEndOf="@+id/edittxt_cart"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="4dp"
-                android:layout_marginEnd="-35dp"/>
+        </LinearLayout>
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="18dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/recycle"
+            tools:ignore="MissingConstraints" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

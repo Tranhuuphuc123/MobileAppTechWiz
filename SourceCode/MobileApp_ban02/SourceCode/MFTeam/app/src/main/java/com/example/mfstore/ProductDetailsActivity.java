@@ -60,7 +60,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         if(productModels != null){
             Glide.with(getApplicationContext()).load(productModels.getProductImg()).into(img_detailsProduct);
             txt_detailsName.setText(productModels.getProductName());
-            txt_detailsPrice.setText(String.valueOf(productModels.getProductPrice()));
+            txt_detailsPrice.setText(String.valueOf(productModels.getProductPrice() + " $ "));
         }
 
         // xử lý sự kiện thêm hay bớt quanlity khi mua sản phẩm

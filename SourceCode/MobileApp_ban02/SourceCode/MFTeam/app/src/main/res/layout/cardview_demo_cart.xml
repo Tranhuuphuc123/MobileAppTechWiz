@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_cardview_cart"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bonsai_bestseller1"
+            app:riv_corner_radius="14dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name: "
+                    android:textColor="@color/green"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_cartview_cartName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" name"
+                    android:textColor="@color/green"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Price: "
+                    android:textColor="@color/red"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_cartview_cartPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" 10 $"
+                    android:textColor="@color/red"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity: "
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/txt_cartview_cartQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" 2"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date: "
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_cartview_cartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="22.09.2023"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Time: "
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/txt_cartview_cartTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="07:21:44 AM"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    tools:ignore="MissingConstraints"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price: "
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/txt_cartview_cartTotalPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="20 USD"
+                    android:textColor="@color/blue"
+                    android:textSize="14dp"
+                    android:layout_weight="1"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_delete_cart"
+            android:layout_width="30dp"
+            android:layout_height="18dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/recycle"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
